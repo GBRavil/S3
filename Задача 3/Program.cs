@@ -1,12 +1,10 @@
 ﻿//Написать программу вычисления произведения чисел от 1 до N
 
-class SumNumbers {
-  static void Main() {
-    int [] num = {3,5,4,1,2};  
-    int sum = 0;
-    for (int i = 0; i < num.Length; i++) {
-        sum = sum + num[i];
-    }
-    Console.WriteLine(sum);
-  }
+Console.WriteLine("Введите максимальное число");
+int N = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Произведения чисел от 1 до "+N);
+int s = 1;
+for (int i = 1; i<=N; i++) {
+    s = s * i;
+    Console.WriteLine(s);
 }

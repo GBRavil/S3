@@ -1,19 +1,21 @@
 ﻿//Подсчитать сумму цифр в числе
 
-class SumNumbers {
-  static void Main() {
-    Console.WriteLine("Введите число");
-    string num = Console.ReadLine();
-    SumNumbers x = new SumNumbers();   
-    x.Sumnum(num);
-  }
-  void Sumnum (string sn) {
-    int n = Convert.ToInt32(sn);
-    int sum = 0;
-    while(n>0) {
-        sum = sum + n%10;
-        n = n/10;
-    }
-    Console.WriteLine(sum);  
-  }
+Console.WriteLine("Введите число");
+int num = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
+while(num>0) {
+    sum = sum + num%10;
+    num = num/10;
 }
+Console.WriteLine(sum);
+
+// Второй вариант решения:
+// Console.WriteLine("Введите число");
+// String s = Console.ReadLine();
+// int sum = 0;
+// int ss = s.Length;
+// for(int i = 0; i<ss; i++) {
+//     sum = sum + (Convert.ToInt32(s[i]))-48;
+// }
+// Console.WriteLine(sum);
+// Не понимаю почему при втором варианте решения задачи выдает линие 48 единиц, если объясните буду признателен.
